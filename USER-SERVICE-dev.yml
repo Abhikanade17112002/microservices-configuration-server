@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: USER-SERVICE-DEV
+    name: USER-SERVICE
 
   datasource:
     url: jdbc:mysql://localhost:3306/userservice?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
