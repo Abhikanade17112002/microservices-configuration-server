@@ -1,3 +1,11 @@
+jwt:
+  secret-key: "ThisIsMySuperSecretKeyForJWTAuthentication123456789"
+  expiration: 300000
+
+server:
+  servlet:
+    context-path: "/api/v1"
+
 server:
   port: 8080
 
