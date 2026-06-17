@@ -27,14 +27,33 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
   instance:
     prefer-ip-address: true
+
+resilience4j:
+  retry:
+    instances:
+      createNewRatingRetry:
+        maxAttempts: 3
+        waitDuration: 2s
+
+  circuitbreaker:
+    instances:
+      createNewRatingCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 20s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics,circuitbreakers
+        include: health,info,metrics,circuitbreakers,retries,retryevents
 
   endpoint:
     health:
