@@ -40,6 +40,7 @@ resilience4j:
           - java.net.ConnectException
           - java.net.SocketTimeoutException
           - feign.RetryableException
+          - java.lang.RuntimeException
 
   circuitbreaker:
     instances:
