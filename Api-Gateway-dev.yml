@@ -1,9 +1,11 @@
 server:
- port: 8080
+  port: 8080
+
 spring:
   application:
     name: Api-Gateway-Dev
-    cloud:
+
+  cloud:
     gateway:
       server:
         webflux:
@@ -11,6 +13,7 @@ spring:
             locator:
               enabled: true
               lower-case-service-id: true
+
           routes:
             - id: user-service-route
               uri: lb://USER-SERVICE-DEV
@@ -36,6 +39,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
   instance:
     prefer-ip-address: true
 
@@ -43,15 +47,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, gateway   # ✅ This was missing
+        include: health, info, gateway
 
 info:
   app:
     name: API-GATEWAY
     description: Api Gateway
-    version: 1.0  
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-       
+    version: 1.0
