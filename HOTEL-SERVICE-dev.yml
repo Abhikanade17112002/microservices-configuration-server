@@ -33,7 +33,7 @@ eureka:
 resilience4j:
   retry:
     instances:
-      hotelServiceRetry:
+      createNewHotelRetry:
         maxAttempts: 3
         waitDuration: 2s
         retryExceptions:
