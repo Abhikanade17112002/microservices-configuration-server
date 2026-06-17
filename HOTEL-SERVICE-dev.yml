@@ -36,11 +36,6 @@ resilience4j:
       createNewHotelRetry:
         maxAttempts: 3
         waitDuration: 2s
-        retryExceptions:
-          - java.net.ConnectException
-          - java.net.SocketTimeoutException
-          - feign.RetryableException
-          - java.lang.RuntimeException
 
   circuitbreaker:
     instances:
