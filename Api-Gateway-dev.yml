@@ -19,7 +19,8 @@ spring:
               args:
                 redis-rate-limiter.replenishRate: 10
                 redis-rate-limiter.burstCapacity: 20
-                key-resolver: "#{@globalKeyResolver}"
+                key-resolver: "#{@userKeyResolver}"    
+                
 
           routes:
             - id: user-service-route
