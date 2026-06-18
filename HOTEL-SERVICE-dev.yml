@@ -52,7 +52,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics,circuitbreakers,retry
+        include: health,info,metrics,circuitbreakers,retry,retryevents
 
   endpoint:
     health:
