@@ -42,6 +42,11 @@ spring:
               uri: lb://RATING-SERVICE-DEV
               predicates:
                 - Path=/api/v1/ratings/**
+            
+            - id: booking-service-route
+              uri: lb://BOOKING-SERVICE-DEV
+              predicates:
+                - Path=/api/v1/bookings/**    
 
 eureka:
   client:
