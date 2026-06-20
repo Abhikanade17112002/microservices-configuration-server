@@ -5,10 +5,7 @@ server:
 spring:
   application:
     name: BOOKING-SERVICE-DEV
-  profiles:
-    active: dev
-  config:
-    import: optional:configserver:http://localhost:8084
+
   datasource:
     url: jdbc:mysql://localhost:3306/bookingservice?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: root
