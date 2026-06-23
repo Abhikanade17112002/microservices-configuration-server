@@ -41,10 +41,10 @@ resilience4j:
     instances:
       hotel-service-retry:
         maxAttempts: 3
-        waitDuration: 2s
+        waitDuration: 1s
       user-service-retry:
         maxAttempts: 3
-        waitDuration: 2s  
+        waitDuration: 1s  
 
   circuitbreaker:
     instances:
