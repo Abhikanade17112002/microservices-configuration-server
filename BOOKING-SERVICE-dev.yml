@@ -15,7 +15,7 @@ spring:
     # username: 39eTZA21moCVeit.root
     # password: JNkHil67UBnTv1ea
     # driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:postgresql://db.nfhfpepeeanqcpvxucrx.supabase.co:5432/postgres
+    url: jdbc:postgresql://aws-1-ap-south-1.pooler.supabase.com:6543/postgres
     username: postgres.nfhfpepeeanqcpvxucrx
     password: At24DwyfwNaSZ2bD
     driver-class-name: org.postgresql.Driver
