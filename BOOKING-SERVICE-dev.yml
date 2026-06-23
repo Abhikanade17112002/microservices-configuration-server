@@ -53,7 +53,7 @@ resilience4j:
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
-        waitDurationInOpenState: 20s
+        waitDurationInOpenState: 40s
         permittedNumberOfCallsInHalfOpenState: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true
       hotel-service-cb:
@@ -61,7 +61,7 @@ resilience4j:
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
-        waitDurationInOpenState: 20s
+        waitDurationInOpenState: 40s
         permittedNumberOfCallsInHalfOpenState: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true   
 
