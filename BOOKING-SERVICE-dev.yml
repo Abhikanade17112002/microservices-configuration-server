@@ -7,9 +7,13 @@ spring:
     name: BOOKING-SERVICE-DEV
 
   datasource:
-    url: jdbc:mysql://localhost:3306/bookingservice?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: root
-    password: Pass@123
+    # url: jdbc:mysql://localhost:3306/bookingservice?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    # username: root
+    # password: Pass@123
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/bookingservice?sslMode=VERIFY_IDENTITY
+    username: 39eTZA21moCVeit.root
+    password: JNkHil67UBnTv1ea
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
