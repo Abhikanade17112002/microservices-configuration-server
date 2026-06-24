@@ -46,8 +46,8 @@ resilience4j:
         exponentialBackoffMultiplier: 2 
 
   circuitbreaker:
+    circuitBreakerAspectOrder: 1
     instances:
-      circuitBreakerAspectOrder: 1
       userServiceCB:
         registerHealthIndicator: true
         slidingWindowSize: 10
