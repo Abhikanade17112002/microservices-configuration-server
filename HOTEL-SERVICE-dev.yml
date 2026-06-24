@@ -37,19 +37,23 @@ eureka:
 
 resilience4j:
   retry:
+    retryAspectOrder: 2
     instances:
-      createNewHotelRetry:
+      userServiceRetry:
         maxAttempts: 3
-        waitDuration: 2s
+        waitDuration: 5s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2 
 
   circuitbreaker:
     instances:
-      createNewHotelCB:
+      circuitBreakerAspectOrder: 1
+      userServiceCB:
         registerHealthIndicator: true
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
-        waitDurationInOpenState: 20s
+        waitDurationInOpenState: 1m
         permittedNumberOfCallsInHalfOpenState: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true
 
