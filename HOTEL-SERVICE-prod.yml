@@ -16,6 +16,7 @@ spring:
     username: postgres.ocsbcjafyeugenkiknvz
     password: Tut4mvoKMiGTrqfD
     driver-class-name: org.postgresql.Driver
+    
 
   jpa:
     hibernate:
@@ -35,14 +36,24 @@ eureka:
     prefer-ip-address: true
 
 resilience4j:
+  retry:
+    retryAspectOrder: 2
+    instances:
+      userServiceRetry:
+        maxAttempts: 3
+        waitDuration: 5s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2 
+
   circuitbreaker:
     instances:
-      createNewHotelCB:
+      circuitBreakerAspectOrder: 1
+      userServiceCB:
         registerHealthIndicator: true
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
-        waitDurationInOpenState: 10s
+        waitDurationInOpenState: 1m
         permittedNumberOfCallsInHalfOpenState: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true
 
