@@ -48,6 +48,11 @@ spring:
               predicates:
                 - Path=/api/v1/bookings/**    
 
+           - id: payment-service-route
+             uri: lb://PAYMENT-SERVICE-DEV
+             predicates:
+                - Path=/api/v1/payments/**      
+
 eureka:
   client:
     service-url:
