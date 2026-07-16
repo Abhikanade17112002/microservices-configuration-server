@@ -51,7 +51,12 @@ resilience4j:
         maxAttempts: 3
         waitDuration: 5s  
         enableExponentialBackoff: true
-        exponentialBackoffMultiplier: 2        
+        exponentialBackoffMultiplier: 2
+      payment-service-retry:
+        maxAttempts: 3
+        waitDuration: 5s  
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2  
 
   circuitbreaker:
     circuitBreakerAspectOrder: 1
@@ -71,7 +76,15 @@ resilience4j:
         failureRateThreshold: 50
         waitDurationInOpenState: 1m
         permittedNumberOfCallsInHalfOpenState: 3
-        automaticTransitionFromOpenToHalfOpenEnabled: true   
+        automaticTransitionFromOpenToHalfOpenEnabled: true 
+      payment-service-cb:   
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 1m
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
 
 management:
   endpoints:
