@@ -55,7 +55,7 @@ spring:
             - id: notification-service-route
               uri: lb://NOTIFICATION-SERVICE-DEV
               predicates:
-                - Path=/api/v1/payments/**    
+                - Path=/api/v1/notifications/**    
 
 eureka:
   client:
