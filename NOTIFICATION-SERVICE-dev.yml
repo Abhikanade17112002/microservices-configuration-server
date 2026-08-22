@@ -1,4 +1,11 @@
+server:
+    port: 8087
+    servlet:
+        context-path: "/api/v1"
+
 spring:
+  application:
+    name: NOTIFICATION-SERVICE-DEV
   datasource:
     url: jdbc:postgresql://aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres
     username: postgres.ocsbcjafyeugenkiknvz
