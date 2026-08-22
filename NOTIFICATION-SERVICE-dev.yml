@@ -1,10 +1,13 @@
 server:
-    port: 8087
-    servlet:
-        context-path: "/api/v1"
+  port: 8087
+  servlet:
+    context-path: "/api/v1"
 
 spring:
-    mail:
+  application:
+    name: NOTIFICATION-SERVICE-DEV
+
+  mail:
     host: smtp.gmail.com
     port: 587
     username: abhishek.kanade.dev@gmail.com
@@ -16,8 +19,7 @@ spring:
           starttls:
             enable: true
             required: true
-  application:
-    name: NOTIFICATION-SERVICE-DEV
+
   datasource:
     url: jdbc:postgresql://aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres
     username: postgres.ocsbcjafyeugenkiknvz
