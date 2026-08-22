@@ -1,26 +1,26 @@
-
-  datasource:
-    url: jdbc:postgresql://aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres
-    username: postgres.ocsbcjafyeugenkiknvz
-    password: Tut4mvoKMiGTrqfD
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    open-in-view: false
-    properties:
+spring:
+    datasource:
+      url: jdbc:postgresql://aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres
+      username: postgres.ocsbcjafyeugenkiknvz
+      password: Tut4mvoKMiGTrqfD
+      driver-class-name: org.postgresql.Driver
+    jpa:
       hibernate:
-        format_sql: true
-        jdbc:
-          batch_size: 20
-
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
-  instance:
-    prefer-ip-address: true
+        ddl-auto: update
+      show-sql: true
+      open-in-view: false
+      properties:
+        hibernate:
+          format_sql: true
+          jdbc:
+            batch_size: 20
+  
+  eureka:
+    client:
+      fetch-registry: true
+      register-with-eureka: true
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+  
+    instance:
+      prefer-ip-address: true
