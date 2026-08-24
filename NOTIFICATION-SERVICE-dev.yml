@@ -60,7 +60,7 @@ resilience4j:
         exponentialBackoffMultiplier: 2
         retryExceptions:
           - software.amazon.awssdk.core.exception.SdkClientException
-          - software.amazon.awssdk.services.sesv2.model.ThrottlingException
+          - software.amazon.awssdk.services.sesv2.model.TooManyRequestsException
 
   circuitbreaker:
     circuitBreakerAspectOrder: 1
