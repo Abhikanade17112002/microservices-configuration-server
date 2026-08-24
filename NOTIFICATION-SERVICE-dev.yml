@@ -58,6 +58,10 @@ resilience4j:
         waitDuration: 5s
         enableExponentialBackoff: true
         exponentialBackoffMultiplier: 2
+        retryExceptions:
+          - software.amazon.awssdk.core.exception.SdkClientException
+          - software.amazon.awssdk.services.sesv2.model.ThrottlingException
+          - software.amazon.awssdk.services.sesv2.model.SesV2Exception
 
   circuitbreaker:
     circuitBreakerAspectOrder: 1
